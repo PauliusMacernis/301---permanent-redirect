@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect Entire Site to New Domain
+RewriteCond %{HTTP_HOST} ^oldweb.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.oldweb.com$ [NC]
+RewriteRule ^(.*)$ http://www.newweb.com/$1 [R=301,L]
